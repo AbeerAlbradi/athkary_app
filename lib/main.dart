@@ -6,11 +6,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'أذكاري',
-      home: HomePage(),
+      theme: ThemeData(fontFamily: 'Cairo'), 
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  // array 
+
   final List<Map<String, dynamic>> athkar = const [
     {
       "title": "أذكار الصباح",
@@ -31,7 +33,7 @@ class HomePage extends StatelessWidget {
         {"text": "حسبي الله لا إله إلا هو عليه توكلت وهو رب العرش العظيم", "count": 7},
         {"text": "اللهم ما أصبح بي من نعمة أو بأحد من خلقك فمنك وحدك لا شريك لك، فلك الحمد ولك الشكر", "count": 1},
         {"text": "اللهم عافني في بدني، اللهم عافني في سمعي، اللهم عافني في بصري، لا إله إلا أنت . اللهم إني أعوذ بك من الكفر، والفقر، وأعوذ بك من عذاب القبر، لا إله إلا أنت", "count": 3},
-        {"text": "اللهم إني أسألك العفو والعافية في الدنيا والآخره، اللهم إني أسألك العفو والعافية، في ديني ودنياي وأهلي، ومالي، اللهم استر عوراتي، وآمن روعاتي، اللهم احفظني من بين يدي، و من خلفي، و عن يميني، و عن شمالي، و من فوقي، وأعوذ بعظمتك أن أغتال من تحتي", "count": 1},
+        {"text": "اللهم إني أسألك العفو والعافية في الدنيا والآخره، اللهم إني أسألك العفو والعافية، في ديني ودنيااي وأهلي، ومالي، اللهم استر عوراتي، وآمن روعاتي، اللهم احفظني من بين يدي، و من خلفي، و عن يميني، و عن شمالي، و من فوقي، وأعوذ بعظمتك أن أغتال من تحتي", "count": 1},
         {"text": "اللهم عالم الغيب والشهادة فاطر السموات والأرض، رب كل شيء ومليكه، أشهد أن لا إله إلا أنت، أعوذ بك من شر نفسي، ومن شر الشيطان وشركه، وأن أقترف على نفسي سوءاً، أو أجره إلى مسلم", "count": 1},
         {"text": "بسم الله الذي لا يضر مع اسمه شيء في الأرض ولا في السماء وهو السميع العليم", "count": 3},
         {"text": "يا حي يا قيوم برحمتك أستغيث أصلح لي شأني كله ولا تكلني إلى نفسي طرفة عين", "count": 1},
@@ -40,7 +42,7 @@ class HomePage extends StatelessWidget {
         {"text":  " لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيء قدير", "count": 100},
         {"text": "سبحان الله وبحمده، عدد خلقه، ورضا نفسه، وزنة عرشه، ومداد كلماته", "count": 3},
         {"text": "سبحان الله وبحمده", "count": 100},
-        {"text": "اللهم صلِّ وسلم على نبينا محمد", "count": 10},
+        {"text": "اللهم صلِّ وسلم على نبينا محمد", "count": 10},
       ]
     },
     {
@@ -72,8 +74,8 @@ class HomePage extends StatelessWidget {
         {"text": "باسمك ربي وضعت جنبي، وبك أرفعه، فإن أمسكت نفسي فارحمها، وإن أرسلتها فاحفظها بما تحفظ به عبادك الصالحين", "count": 1},
         {"text": "اللهم قني عذابك يوم تبعث عبادك", "count": 3},
         {"text": "الحمد لله الذي أطعمنا وسقانا وكفانا وآوانا فكم ممن لا كافي له ولا مؤوي", "count": 1},
-        {"text": "اللهم إنك خلقت نفسي وأنت توفَّاها، لك مماتها ومحياها، إن أحييتها فاحفظها، وإن أمتَّها فاغفر لها، اللهم إني أسألك العافية", "count": 1},
-        {"text": "اللهم رب السماوات السبع ورب العرش العظيم، ربنا ورب كل شيء، فالق الحب والنوى ومنزل التوراة والإنجيل والفرقان، أعوذ بك من شرّ كل شيء أنت آخذ بناصيته، اللهم أنت الأول فليس قبلك شيء، وأنت الآخر فليس بعدك شيء، وأنت الظاهر فليس فوقك شيء، وأنت الباطن فليس دونك شيء، أقض عنّا الدَّين وأغننا من الفقر ", "count": 1},
+        {"text": "اللهم إنك خلقت نفسي وأنت توفَّاها، لك مماتها ومحياها، إن أحييتها فاحفظها، وإن أمتَّها فاغفر لها، اللهم إني أسألك العافية", "count": 1},
+        {"text": "اللهم رب السماوات السبع ورب العرش العظيم، ربنا ورب كل شيء، فالق الحب والنوى ومنزل التوراة والإنجيل والفرقان، أعوذ بك من شرّ كل شيء أنت آخذ بناصيته، اللهم أنت الأول فليس قبلك شيء، وأنت الآخر فليس بعدك شيء، وأنت الظاهر فليس فوقك شيء، وأنت الباطن فليس دونك شيء، أقض عنّا الدَّين وأغننا من الفقر ", "count": 1},
         {"text": "اللهم أسلمت نفسي إليك، وفوّضت أمري إليك، ووجهت وجهي إليك، وألجأت ظهري إليك، رغبة ورهبة إليك، لا ملجأ ولا منجا منك إلا إليك، آمنت بكتابك الذي أنزلت، وبنبيّك الذي أرسلت", "count": 1},
       ]
     },
@@ -82,7 +84,6 @@ class HomePage extends StatelessWidget {
       "content": [
         {"text":"بسم الله توكلت على الله ولا حول ولا قوة إلا بالله اللهم إني أعوذ بك أن أَضلّ أو أُضلّ أو أَزلّ أو أُزلّ أو أَظلم أو أُظلم أو أَجهل أو يُجهل عليّ","count":1}
       ]
-
     },
   ];
 
@@ -97,11 +98,11 @@ class HomePage extends StatelessWidget {
         elevation: 0,
       ),
       body: ListView.builder(
-        padding: const EdgeInsets.only(top: 20),
+        padding: EdgeInsets.only(top: 20),
         itemCount: athkar.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 12),
+            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 12),
             child: InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(
@@ -146,7 +147,8 @@ class AthkarPage extends StatefulWidget {
 }
 
 class _AthkarPageState extends State<AthkarPage> {
-  late List<int> counters;
+
+  List<int> counters = [];
 
   @override
   void initState() {
@@ -165,14 +167,15 @@ class _AthkarPageState extends State<AthkarPage> {
         iconTheme: const IconThemeData(color: Color(0xFFF1F5F9)),
       ),
       body: ListView.builder(
-        padding: const EdgeInsets.symmetric(vertical: 15),
+        padding: EdgeInsets.symmetric(vertical: 15),
         itemCount: widget.content.length,
         itemBuilder: (context, index) {
-          int target = widget.content[index]['count']; 
-          bool isFinished = counters[index] >= target;
+   
+          var target = widget.content[index]['count']; 
+          var isFinished = counters[index] >= target;
 
           return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: InkWell(
               onTap: () {
                 if (counters[index] < target) {
@@ -182,7 +185,7 @@ class _AthkarPageState extends State<AthkarPage> {
                 }
               },
               child: AnimatedContainer(
-                duration: const Duration(milliseconds: 400),
+                duration: Duration(milliseconds: 400),
                 decoration: BoxDecoration(
                   color: isFinished ? const Color(0xFF16213D).withOpacity(0.1) : Colors.white,
                   borderRadius: BorderRadius.circular(25),
@@ -192,7 +195,7 @@ class _AthkarPageState extends State<AthkarPage> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(25),
+                  padding: EdgeInsets.all(25),
                   child: Column(
                     children: [
                       Text(
@@ -206,9 +209,9 @@ class _AthkarPageState extends State<AthkarPage> {
                           decoration: isFinished ? TextDecoration.lineThrough : null,
                         ),
                       ),
-                      const SizedBox(height: 20),
+                      SizedBox(height: 20),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                         decoration: BoxDecoration(
                           color: isFinished ? Colors.green[700] : const Color(0xFF16213D),
                           borderRadius: BorderRadius.circular(30),

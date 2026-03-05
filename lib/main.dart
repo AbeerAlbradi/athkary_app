@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'أذكاري',
-      theme: ThemeData(fontFamily: 'Cair
+      theme: ThemeData(fontFamily: 'Cairo'),
+      home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }

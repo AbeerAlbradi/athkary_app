@@ -1,4 +1,4 @@
-// created by Abeer Albradi - Athkary app
+//created by Abeer Albradi - Athkary app
 
 import 'package:flutter/material.dart';
 

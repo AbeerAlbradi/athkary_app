@@ -61,7 +61,25 @@ class HomePage extends StatelessWidget {
         {"text": "اللهم أسلمت نفسي إليك، وفوّضت أمري إليك، ووجهت وجهي إليك، وألجأت ظهري إليك", "count": 1},
       ]
     },
+    { 
+	"title": "أذكار بعد الصلاة",
+      "content": [
+        {"text": "أستغفر الله، أستغفر الله، أستغفرالله,                            اللهم أنت السلام ومنك السلام تباركت يا ذا الجلال والإكرام", "count": 1},
+        {"text": "لا إله إلا الله وحده لا شريك له، له الملك وله الحمد، وهو على كل شيءٍ قدير، لا حول ولا قوة إلا بالله، لا إله إلا الله، ولا نعبد إلا إياه، له النعمة وله الفضل، وله الثناء  الحَسَن، لا إله إلا الله مُخلصين له الدّين ولو كره الكافرون  اللهم لا مانع لما أعطيت، ولا معطي لما منعت، ولا ينفع ذا الجَدِّ منك الجَد", "count": 1},
+        {"text": "لا إله إلا الله وحده لا شريك له، له الملك وله الحمد يحيي ويميت وهو على كل شيءٍ قدير", "count": 1},
+	{"text": "سبحان الله", "count": 33},
+	{"text": "الحمد لله", "count": 33},
+	{"text": "الله أكبر ", "count": 33},
+      ]
+    },
+    {
+      "title": "ذكر الخروج من المنزل",
+      "content": [
+        {"text": "بسم الله توكلت على الله ولا حول ولا قوة إلا بالله اللهم إني أعوذ بك أن أَضلّ أو أُضلّ أو أَزلّ أو أُزلّ أو أَظلم أو أُظلم أو أَجهل أو يُجهل عليّ", "count": 1},
+      ]
+    }
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -133,15 +151,26 @@ class _AthkarPageState extends State<AthkarPage> {
     }
   }
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF1F5F9),
       appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Color(0xFF16213D),
+        title: Text(
+          widget.title,
+          style: TextStyle(
+            color: Color(0xFFF1F5F9), 
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Color(0xFF16213D), 
         centerTitle: true,
+        iconTheme: IconThemeData(color: Color(0xFFF1F5F9)), 
+        elevation: 0,
       ),
+  
+
+       
       body: ListView.builder(
         padding: EdgeInsets.symmetric(vertical: 15),
         itemCount: widget.content.length,
